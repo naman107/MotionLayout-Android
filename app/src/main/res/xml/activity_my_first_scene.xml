@@ -25,11 +25,32 @@
     <Transition
         app:constraintSetEnd="@id/end"
         app:constraintSetStart="@+id/start"
-        app:duration="2000">
+        app:duration="3000">
 
         <OnClick
             app:clickAction="toggle"
             app:targetId="@id/my_box"/>
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="40"
+                app:motionTarget="@id/my_box"
+                app:keyPositionType="parentRelative"
+                app:percentX="0.8"
+                app:percentY="0.3" />
+            <KeyPosition
+                app:framePosition="50"
+                app:motionTarget="@id/my_box"
+                app:keyPositionType="parentRelative"
+                app:percentX="0.55"
+                app:percentY="0.2" />
+            <KeyPosition
+                app:framePosition="60"
+                app:motionTarget="@id/my_box"
+                app:keyPositionType="parentRelative"
+                app:percentX="0.3"
+                app:percentY="0.3" />
+        </KeyFrameSet>
 
     </Transition>
 
