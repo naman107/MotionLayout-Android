@@ -27,31 +27,87 @@
         app:constraintSetStart="@+id/start"
         app:duration="3000">
 
-        <OnClick
-            app:clickAction="toggle"
-            app:targetId="@id/my_box"/>
+        <OnSwipe
+            app:touchAnchorSide="right"
+            app:touchAnchorId="@id/my_box"/>
 
         <KeyFrameSet>
-            <KeyPosition
-                app:framePosition="40"
-                app:motionTarget="@id/my_box"
-                app:keyPositionType="parentRelative"
-                app:percentX="0.8"
-                app:percentY="0.3" />
             <KeyPosition
                 app:framePosition="50"
                 app:motionTarget="@id/my_box"
                 app:keyPositionType="parentRelative"
-                app:percentX="0.55"
+                app:percentX="0.5"
                 app:percentY="0.2" />
-            <KeyPosition
-                app:framePosition="60"
+
+            <KeyAttribute
+                app:framePosition="0"
                 app:motionTarget="@id/my_box"
-                app:keyPositionType="parentRelative"
-                app:percentX="0.3"
-                app:percentY="0.3" />
+                android:alpha="0.5"
+                >
+                <CustomAttribute
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="#FFFFFF"
+                    />
+            </KeyAttribute>
+
+            <KeyAttribute
+                app:framePosition="30"
+                app:motionTarget="@id/my_box"
+                android:alpha="0.8"
+                android:scaleY="1.5"
+                android:scaleX="1.5"
+                android:rotation="90"
+                >
+                <CustomAttribute
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="#3AF407"
+                />
+            </KeyAttribute>
+
+            <KeyAttribute
+                app:framePosition="50"
+                app:motionTarget="@id/my_box"
+                android:alpha="1.0"
+                android:scaleY="2.0"
+                android:scaleX="2.0"
+                android:rotation="180"
+                >
+                <CustomAttribute
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="#FF0000"
+                    />
+            </KeyAttribute>
+
+            <KeyAttribute
+                app:framePosition="80"
+                app:motionTarget="@id/my_box"
+                android:alpha="0.8"
+                android:scaleY="1.5"
+                android:scaleX="1.5"
+                android:rotation="90"
+                >
+                <CustomAttribute
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="#124CDD"
+                    />
+            </KeyAttribute>
+
+            <KeyAttribute
+                app:framePosition="100"
+                app:motionTarget="@id/my_box"
+                android:alpha="0.5"
+                android:scaleY="1.0"
+                android:scaleX="1.0"
+                >
+                <CustomAttribute
+                    app:attributeName="backgroundColor"
+                    app:customColorValue="#FFFFFF"
+                    />
+            </KeyAttribute>
+
         </KeyFrameSet>
 
     </Transition>
 
 </MotionScene>
+
